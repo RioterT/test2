@@ -1,0 +1,58 @@
+<div style="text-align: center">
+  <h1>Welcome to My Angular ECharts Example!</h1>
+</div>
+<div echarts [options]="chartOption" style="height: 400px"></div>
+
+<p style="font-size: 20px; font-weight: 900">Primeng example</p>
+
+<p-button label="Click Me" (click)="onClick()"></p-button>
+
+<div class="card">
+  <p-table [value]="products" [tableStyle]="{ 'min-width': '60rem' }">
+    <ng-template pTemplate="header">
+      <tr>
+        <th pSortableColumn="code" style="width: 20%">
+          Code <p-sortIcon field="code" />
+        </th>
+        <th pSortableColumn="name" style="width: 20%">
+          Name <p-sortIcon field="name" />
+        </th>
+        <th pSortableColumn="category" style="width: 20%">
+          Category <p-sortIcon field="category" />
+        </th>
+        <th pSortableColumn="quantity" style="width: 20%">
+          Quantity <p-sortIcon field="quantity" />
+        </th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-product>
+      <tr>
+        <td>{{ product.code }}</td>
+        <td>{{ product.name }}</td>
+        <td>{{ product.category }}</td>
+        <td>{{ product.quantity }}</td>
+      </tr>
+    </ng-template>
+  </p-table>
+</div>
+
+<!-- <div class="card">
+  <p-table [value]="products" [tableStyle]="{ 'min-width': '50rem' }">
+      <ng-template pTemplate="header">
+          <tr>
+              <th>Code</th>
+              <th>Name</th>
+              <th>Category</th>
+              <th>Quantity</th>
+          </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-product>
+          <tr>
+              <td>{{ product.code }}</td>
+              <td>{{ product.name }}</td>
+              <td>{{ product.category }}</td>
+              <td>{{ product.quantity }}</td>
+          </tr>
+      </ng-template>
+  </p-table>
+</div> -->
